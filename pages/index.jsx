@@ -1,5 +1,5 @@
-// import { jsxs } from "../helper";
-// import { useJsx } from "../helper";
+import Hello from "../Hello";
+import World from "../World";
 
 export default function HomePage() {
   return (
@@ -14,11 +14,10 @@ export default function HomePage() {
 }
 
 function HelloWorld() {
-  const jsxs = [];
   return (
     <div>
-      <div>Hello World!</div>
-      <div>{jsxs}</div>
+      <Hello></Hello>
+      <World></World>
     </div>
   );
 }
