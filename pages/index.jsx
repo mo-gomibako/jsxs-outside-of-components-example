@@ -1,24 +1,30 @@
-import { useRef } from "react";
-
-// const jsxs = [
-//   <div>a</div>,
-//   <div>b</div>,
-//   <div>c</div>,
-//   <div>d</div>,
-//   <div>e</div>,
-// ];
-
-function useJsx() {
-  return useRef([
-    <div>a</div>,
-    <div>b</div>,
-    <div>c</div>,
-    <div>d</div>,
-    <div>e</div>,
-  ]).current;
-}
+// import { jsxs } from "../helper";
+// import { useJsx } from "../helper";
 
 export default function HomePage() {
-  const jsxs = useJsx();
-  return <div>Hello World! {jsxs}</div>;
+  return (
+    <div>
+      <HelloWorld />
+      <HelloWorld />
+      <HelloWorld />
+      <HelloWorld />
+      <HelloWorld />
+    </div>
+  );
+}
+
+function HelloWorld() {
+  const jsxs = [];
+  return (
+    <div>
+      <div>Hello World!</div>
+      <div>{jsxs}</div>
+    </div>
+  );
+}
+
+export function getServerSideProps() {
+  return {
+    props: {},
+  };
 }
