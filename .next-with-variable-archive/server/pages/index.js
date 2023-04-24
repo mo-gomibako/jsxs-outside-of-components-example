@@ -5,7 +5,7 @@ exports.id = 405;
 exports.ids = [405];
 exports.modules = {
 
-/***/ 940:
+/***/ 615:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -19,8 +19,11 @@ __webpack_require__.d(__webpack_exports__, {
 
 ;// CONCATENATED MODULE: external "react/jsx-runtime"
 const jsx_runtime_namespaceObject = require("react/jsx-runtime");
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(689);
 ;// CONCATENATED MODULE: ./helper.jsx
 
+ // 実際にはこれもバンドルされていることが多い
 const jsxs = [
     /*#__PURE__*/ jsx_runtime_namespaceObject.jsx("div", {
         children: "a"
@@ -39,7 +42,40 @@ const jsxs = [
     }), 
 ];
 
+;// CONCATENATED MODULE: ./Hello.jsx
+
+
+function Hello() {
+    return /*#__PURE__*/ (0,jsx_runtime_namespaceObject.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx("div", {
+                children: "Hello!"
+            }),
+            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx("div", {
+                children: jsxs
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./World.jsx
+
+
+function World() {
+    return /*#__PURE__*/ (0,jsx_runtime_namespaceObject.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx("div", {
+                children: "World!"
+            }),
+            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx("div", {
+                children: jsxs
+            })
+        ]
+    });
+}
+
 ;// CONCATENATED MODULE: ./pages/index.jsx
+
 
 
 function HomePage() {
@@ -56,12 +92,8 @@ function HomePage() {
 function HelloWorld() {
     return /*#__PURE__*/ (0,jsx_runtime_namespaceObject.jsxs)("div", {
         children: [
-            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx("div", {
-                children: "Hello World!"
-            }),
-            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx("div", {
-                children: jsxs
-            })
+            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx(Hello, {}),
+            /*#__PURE__*/ jsx_runtime_namespaceObject.jsx(World, {})
         ]
     });
 }
@@ -72,6 +104,13 @@ function getServerSideProps() {
 }
 
 
+/***/ }),
+
+/***/ 689:
+/***/ ((module) => {
+
+module.exports = require("react");
+
 /***/ })
 
 };
@@ -81,7 +120,7 @@ function getServerSideProps() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(940));
+var __webpack_exports__ = (__webpack_exec__(615));
 module.exports = __webpack_exports__;
 
 })();

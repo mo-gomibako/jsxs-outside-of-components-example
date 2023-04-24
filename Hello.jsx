@@ -1,5 +1,6 @@
+import { jsxs } from "./helper";
+
 export default function Hello() {
-  const jsxs = [];
   return (
     <div>
       <div>Hello!</div>
